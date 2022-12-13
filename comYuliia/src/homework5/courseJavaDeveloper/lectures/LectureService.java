@@ -5,6 +5,8 @@ class LectureService {
         Lecture lecture = new Lecture();
         Lecture lecture2 = new Lecture();
         Lecture lecture3 = new Lecture();
+        Lecture lecture4 = new Lecture();
+        Lecture lecture5 = new Lecture();
 
         lecture2.homeWork = "Create two methods";
         lecture3.lectureName = "Methods";
