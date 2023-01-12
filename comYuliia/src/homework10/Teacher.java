@@ -2,10 +2,11 @@ package homework10;
 
 class Teacher extends SuperEntity{
     private int experience;
+    static int count;
 
     public Teacher() {
+        count++;
     }
-
     public Teacher(int id) {
         super(id);
     }

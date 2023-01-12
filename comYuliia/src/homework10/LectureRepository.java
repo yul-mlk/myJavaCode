@@ -1,58 +1,57 @@
 package homework10;
 
-public class LectureRepository extends EntityRepository{
-    private static Lecture[] lectures = new Lecture[3];
+import java.util.Arrays;
 
-    public static void main(String[] args) {
-        lectures[0] = new Lecture("Introduction",1);;
-        lectures[1] = new Lecture("Classes",2);
-        lectures[2] = new Lecture("Methods",3);}
+class LectureRepository extends EntityRepository {
+    protected static Lecture[] lectures = new Lecture[3];
+
+    public static Lecture[] getLectures() {
+        return lectures;
+    }
 
     @Override
     public void getInfo() {
-        super.getInfo();
         for (int k = 0; k < lectures.length; k++) {
-        System.out.println("Index of array is " + k + ", name is " + LectureRepository.lectures[k].getName() + ", id is " + LectureRepository.lectures[k].getId());
-    }}}
-
-
-/*protected void getEntities(int i) {
-        lectures =new Lecture[i];
+            System.out.println(lectures);
+            System.out.println("Index of array is " + k + ", name is " + lectures[k].getName() + ", id is " + lectures[k].getId());
+        }
     }
-*/
 
+    @Override
+    protected void addEnt() {
+        Lecture lecture = new Lecture();
+        System.out.println("Amount of added lectures is " + lecture.count);
+    }
 
+    @Override
+    protected void getById(int id) {
+        for (int j = 0; j < lectures.length; j++) {
+            Lecture lecture = lectures[j];
+            if (lectures[j].getId() == id) {
+                System.out.println(lecture);
+            }
+        }
+    }
 
-    /*public void getInfo() {
-            for (int k = 0; k < LectureRepository.lectures.length; k++) {
-                System.out.println("Index of array is " + k + ", name is " + LectureRepository.lectures[k].getName() + ", id is " + LectureRepository.lectures[k].getId());
-            }*/
+    @Override
+    protected boolean deleteById(int id) {
+        for (int l = 0; l < lectures.length; l++) {
+            if (entities[l].getId() == id) {
+                entities[l] = null;
+                return true;
+            }
+        }
+        return false;
+    }
 
-       /* public static void addLecture() {
-            Lecture lecture = new Lecture("Introduction", 1);
-            System.out.println("Amount of added lectures is " + Lecture.getCount());}*/
+    public static void main(String[] args) {
+        Lecture lecture = new Lecture("Introduction", 1);
+        lectures[0] = lecture;
+        lectures[1] = new Lecture("Classes", 2);
+        lectures[2] = new Lecture("Methods", 3);
 
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //getById(1);
-       // getInfo();
-       // deleteById(1);
-        //
-
-        //
-
-        //deleteById(2);
 
 

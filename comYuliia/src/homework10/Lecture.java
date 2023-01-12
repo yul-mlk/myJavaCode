@@ -1,7 +1,7 @@
 package homework10;
 
-class Lecture extends SuperEntity{
-    private static int count = 0;
+class Lecture extends SuperEntity {
+    protected static int count = 0;
 
     public Lecture() {
         super();
@@ -11,6 +11,11 @@ class Lecture extends SuperEntity{
     public Lecture(String name, int id) {
         super(name, id);
         count++;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     public static int getCount() {

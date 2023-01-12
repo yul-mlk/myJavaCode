@@ -6,9 +6,11 @@ public class SuperEntity {
 
     public SuperEntity() {
     }
+
     public SuperEntity(int id) {
         this.id = id;
     }
+
     public SuperEntity(String name, int id) {
         this.name = name;
         this.id = id;
