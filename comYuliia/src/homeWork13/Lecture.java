@@ -1,4 +1,4 @@
-package homework13;
+package homeWork13;
 
 public class Lecture extends Entity {
     static int count = 0;

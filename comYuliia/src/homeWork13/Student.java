@@ -1,4 +1,4 @@
-package homework13;
+package homeWork13;
 
 public class Student extends Entity {
     public Student(int id, String name) {
