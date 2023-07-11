@@ -1,0 +1,5 @@
+Log{level=ERROR, name=' Lecturelog ', message=' The error needs to be resolved, but the program continues to run ', localDateTime=2023-04-08T02:30:01.050805700, stacktrace=null}
+Log{level=WARNING, name=' Lecturelog ', message=' Unexpected action, but the system fulfilled the request (catch exception) ', localDateTime=2023-04-08T02:30:01.057830800, stacktrace=null}
+Log{level=INFO, name=' Lecturelog ', message=' Action that is important to the program (System.out.print) ', localDateTime=2023-04-08T02:30:01.058332, stacktrace=null}
+Log{level=DEBUG, name=' Lecturelog ', message=' Expected program action (function result)', localDateTime=2023-04-08T02:30:01.058332, stacktrace=null}
+Log{level=INFO, name=' Mainlog2 ', message=' Action that is important to the program (System.out.print) ', localDateTime=2023-04-08T02:30:01.058332, stacktrace=null}
